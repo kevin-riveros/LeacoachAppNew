@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">tutorApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_tutors">Tutors</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_profile">imageProfile</string>
+    <string name="feed_title">Feed</string>
+    <string name="tutors_title">Tutors</string>
+    <string name="profile_title">Profile</string>
+    <string name="title_activity_login">Login</string>
+
+    <string name="api_key">AIzaSyCHjkM2xlIntxpYoflCpvF0U1eagRzWJCw</string>
+    <string name="test_video_id">ady--PNMsfI</string>
+</resources>

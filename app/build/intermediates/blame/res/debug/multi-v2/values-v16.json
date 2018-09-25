@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/kevinriverosguia/Documents/imagenes_tutorapp/LeacoachApp-branch1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/kevinriverosguia/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/628d2a56083937a9f11933c7b04d9fd9/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/kevinriverosguia/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-rc02.aar/9dd0b8da850018fd6e6f67e458db535d/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}
