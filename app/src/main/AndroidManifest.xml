@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="kiva.com.pe.tutorapp.viewcontrollers.activities.MainActivity"
+            android:name=".viewcontrollers.activities.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +21,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kiva.com.pe.tutorapp.viewcontrollers.activities.LoginActivity"
+            android:name=".viewcontrollers.activities.LoginActivity"
             android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".viewcontrollers.activities.AboutMediaActivity"
+            android:label="@string/title_activity_about_media"
+            android:parentActivityName=".viewcontrollers.activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="kiva.com.pe.tutorapp.viewcontrollers.activities.MainActivity" />
         </activity>
     </application>
 
