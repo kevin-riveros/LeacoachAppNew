@@ -11,11 +11,16 @@ import android.view.ViewGroup
 
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.AbstractYouTubePlayerListener
 import android.support.annotation.NonNull
+import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.widget.LinearLayout
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.YouTubePlayerInitListener
 import kiva.com.pe.tutorapp.R
+import kiva.com.pe.tutorapp.models.Media
+import kiva.com.pe.tutorapp.viewcontrollers.adapters.VideosAdapter
+import kotlinx.android.synthetic.main.fragment_feed.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,26 +33,25 @@ private const val ARG_PARAM2 = "param2"
  *
  */
 class FeedFragment : Fragment() {
+    private var media=ArrayList<Media>()
+    private lateinit var mediaRecyclerView: RecyclerView
+    private lateinit var mediaAdapter: VideosAdapter
+    private lateinit var mediaLayoutManager: RecyclerView.LayoutManager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+        val video1 = Media(1,1,"Programacion 1 ","https://www.youtube.com/watch?v=0vTopF6wwZg",1)
+        val video2 =Media(1,1,"Programacion 2 ","https://www.youtube.com/watch?v=0vTopF6wwZg",1)
+        media.add(video1)
+        media.add(video2)
+
         val view = inflater.inflate(R.layout.fragment_feed, container, false)
-
-        val youtubePlayerView = view.findViewById<YouTubePlayerView>(R.id.youtube_player_view)
-        lifecycle.addObserver(youtubePlayerView)
-
-        youtubePlayerView.initialize(object : YouTubePlayerInitListener {
-            override fun onInitSuccess(initializedYouTubePlayer: YouTubePlayer) {
-                initializedYouTubePlayer.addListener(object : AbstractYouTubePlayerListener() {
-                    override fun onReady() {
-                        val videoId = getString(R.string.test_video_id)
-                        initializedYouTubePlayer.loadVideo(videoId, 0F)
-                    }
-                })
-            }
-        }, true)
-
+        mediaAdapter = VideosAdapter(media, view.context)
+        mediaLayoutManager = GridLayoutManager(view.context, 1) as RecyclerView.LayoutManager
+        mediaRecyclerView = view.mediaRecycler
+        mediaRecyclerView.adapter = mediaAdapter
+        mediaRecyclerView.layoutManager = mediaLayoutManager
         return view
     }
 

@@ -7,10 +7,9 @@
     tools:context=".viewcontrollers.fragments.FeedFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView
-        android:id="@+id/youtube_player_view"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mediaRecycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/default_margin"/>
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
