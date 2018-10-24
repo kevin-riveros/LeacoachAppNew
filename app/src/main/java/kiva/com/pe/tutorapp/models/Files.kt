@@ -2,22 +2,24 @@ package kiva.com.pe.tutorapp.models
 
 import android.os.Bundle
 
-data class Media(
+data class Files(
         val id: Int,
         val tutor_speciality_id: Int,
         val created_at: String?,
         val url: String?,
-        val views: Int
+        val views: Int,
+        val type: Int
 ){
     companion object {
-        fun from(bundle: Bundle):Media{
+        fun from(bundle: Bundle):Files{
 
-            return Media(
+            return Files(
                     bundle.getInt("id"),
                     bundle.getInt("tutor_speciality_id"),
                     bundle.getString("created_at"),
                     bundle.getString("url"),
-                    bundle.getInt("views")
+                    bundle.getInt("views"),
+                    bundle.getInt("type")
             )
         }
     }
@@ -29,6 +31,7 @@ data class Media(
             putString("created_at",created_at)
             putString("url",url)
             putInt("views",views)
+            putInt("type",type)
 
         }
         return bundle

@@ -10,13 +10,13 @@
 
 
     <ImageView
-        android:id="@+id/youtubePlayer"
+        android:id="@+id/tutorImageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_margin="@dimen/default_margin"
-        android:contentDescription="@string/image_profile"
+        android:contentDescription="nameTutor"
         android:padding="@dimen/default_padding"
-        android:src="@mipmap/img_profile"
+        android:src="@mipmap/teacher"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

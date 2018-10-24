@@ -6,14 +6,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".viewcontrollers.activities.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,16 +24,12 @@
         <activity
             android:name=".viewcontrollers.activities.LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
-            android:name=".viewcontrollers.activities.AboutMediaActivity"
-            android:label="@string/title_activity_about_media"
-            android:parentActivityName=".viewcontrollers.activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="kiva.com.pe.tutorapp.viewcontrollers.activities.MainActivity" />
-        </activity>
+            android:name=".viewcontrollers.activities.AboutFileActivity"
+            android:label="@string/title_activity_about_file"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

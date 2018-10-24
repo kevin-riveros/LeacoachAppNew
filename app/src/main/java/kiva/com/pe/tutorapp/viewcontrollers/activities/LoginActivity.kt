@@ -16,7 +16,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         var btnLogIn = findViewById<Button>(R.id.loginButton)
-
         //userRol = "Tutor"
         userRol = "Alumno"
 

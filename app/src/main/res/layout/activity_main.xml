@@ -8,10 +8,17 @@
     android:layout_height="match_parent"
     tools:context=".viewcontrollers.activities.MainActivity">
 
+    <include layout="@layout/toolbar_main">
+
+    </include>
+
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_marginBottom="?android:attr/actionBarSize"
+        />
 
 
     <android.support.design.widget.BottomNavigationView

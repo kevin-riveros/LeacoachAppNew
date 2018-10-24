@@ -32,6 +32,7 @@ class ProfileFragment : Fragment() {
             val settingsLogin = SettingsAccount(view.context)
             settingsLogin.didUserLoggedIn = false
             activity?.recreate()
+
         }
 
         return view
